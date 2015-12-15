@@ -7,5 +7,6 @@ import neurotest.gui.Launcher.dmsg // The debug message function
  */
 
 trait NetworkNode {
-
+  
+  
 }
