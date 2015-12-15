@@ -5,6 +5,7 @@ package neurotest.gui
  * 
  * Parameters:
  * -d, --debug - enable debug messages to console.
+ * 
  */
 object Launcher {
   
