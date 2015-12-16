@@ -7,5 +7,7 @@ import neurotest.gui.Launcher.dmsg // The debug message function
  */
 
 trait ProcessorNode extends NetworkNode {
-  dmsg("I am hidden! " + this)
+  
+  def receive(input: Any*)
+  
 }

@@ -7,14 +7,21 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * A trait that defines the nodes that are part of the neural network.
  * Nodes can create connections with each other.
+ * 
+ * Extensions of this class should implement internals for storing the connections.
  */
 
 trait NetworkNode {
   
-  private val inputs = ArrayBuffer[Connection]()
-  private val outputs = ArrayBuffer[Connection]()
+  val id: Int
+  var name: String
   
-  // TODO: finish connections 
-  def connect(that: NetworkNode) = this.outputs += new Connection(this, that);
+  // One-way connection from this to the target node.
+  def connect(that: NetworkNode)
+  
+  // Methods for sending processed data to named connections and receiving it.
+  // The processing of received data can then be done within a receive call.
+  def send(data: Any, to: Connection*) = to.foreach(_.send(data))
+  def receive(data: Any)
   
 }
