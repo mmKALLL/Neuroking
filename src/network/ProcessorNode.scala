@@ -1,4 +1,4 @@
-package neurotest.nodes
+package network
 import neurotest.gui.Launcher.dmsg // The debug message function
 
 /**
@@ -6,6 +6,6 @@ import neurotest.gui.Launcher.dmsg // The debug message function
  * 
  */
 
-class HiddenNode {
+trait ProcessorNode extends NetworkNode {
   dmsg("I am hidden! " + this)
 }
