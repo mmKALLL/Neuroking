@@ -1,4 +1,4 @@
-package network
+package network.nodetypes
 import neurotest.gui.Launcher.dmsg // The debug message function
 
 /**

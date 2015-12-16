@@ -12,6 +12,6 @@ import neurotest.gui.Launcher.dmsg // The debug message function
  */
 
 class System {
-  
+  // TODO: A single network system
   
 }

@@ -1,5 +1,5 @@
-package network
-import neurotest.gui.Launcher.dmsg // The debug message function
+package network.nodetypes
+import neurotest.gui.Launcher.dmsg
 
 
 /**

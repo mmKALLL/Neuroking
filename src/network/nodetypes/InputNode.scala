@@ -1,4 +1,4 @@
-package network
+package network.nodetypes
 import neurotest.gui.Launcher.dmsg // The debug message function
 
 /**
@@ -7,7 +7,9 @@ import neurotest.gui.Launcher.dmsg // The debug message function
 
 trait InputNode extends NetworkNode {
   
-  dmsg("I am hidden! " + this)
+  dmsg("I am taking input! " + this)
+  
+  
   
   
 }
