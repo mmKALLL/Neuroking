@@ -3,7 +3,7 @@ package neurotest.gui
 /**
  * A simple wrapper for launching the software and displaying debug messages.
  * 
- * Parameters:
+ * Command line arguments:
  * -d, --debug - enable debug messages to console.
  * 
  */

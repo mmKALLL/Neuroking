@@ -24,4 +24,9 @@ trait NetworkNode {
   def send(data: Any, to: Connection*) = to.foreach(_.send(data))
   def receive(data: Any)
   
+  // Extending classes should call super.toString and add their own to this list, e.g. outwards connections etc.
+  override def toString = "This network node is of type " + this.getClass + " and has the following information." +
+                          "\nid: " + id +
+                          "\nname: " + name
+  
 }
