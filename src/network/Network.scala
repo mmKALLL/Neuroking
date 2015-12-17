@@ -1,7 +1,9 @@
 package network
 
+import scala.collection.mutable.ArrayBuffer
+import network.nodetypes.NetworkNode
+
 /**
- * 
  * This class represents a single network and controls the nodes 
  * within, distributing and managing IDs and names, etc.
  * 
@@ -11,4 +13,13 @@ package network
  */
 class Network {
   // TODO: specification implementation
+  
+  private val nodes = ArrayBuffer[NetworkNode]()
+  private var ready = false
+  
+  
+  def run = ???
+  
+  def flush = ???
+  
 }

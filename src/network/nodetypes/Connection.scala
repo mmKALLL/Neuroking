@@ -8,7 +8,7 @@ package network.nodetypes
 class Connection(from: NetworkNode, to: NetworkNode) {
   
   // FIXME: proper id mechanism
-  val id: Int = 0
+  val id: Int = ???
   var name: String = id.toString
   
   def send(data: Any) = to.receive(data)

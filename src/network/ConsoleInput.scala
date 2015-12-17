@@ -9,4 +9,19 @@ import network.nodetypes.InputNode
  */
 class ConsoleInput extends InputNode {
   
+  // TODO: id handler
+  val id: Int = ???
+  var name: String = ???
+  
+  
+  
+  // Members declared in network.nodetypes.InputNode
+  def readInput: Unit = ???
+  
+  // Members declared in network.nodetypes.NetworkNode
+  def connect(that: network.nodetypes.NetworkNode): Unit = ???
+  
+  def receive(data: Any): Unit = ???
+  
+  
 }

@@ -12,9 +12,11 @@ import scala.collection.mutable.ArrayBuffer
  */
 
 trait InputNode extends NetworkNode {
-
-  val outputs = ArrayBuffer[Connection]()
-
+  
+  private val outputs = ArrayBuffer[Connection]()
+  
+  def readInput
+  
   override def toString = super.toString +
                           "\noutputs:\n" + outputs.foreach { _.toString + "\n" }
 

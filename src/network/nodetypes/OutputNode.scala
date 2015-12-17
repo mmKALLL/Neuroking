@@ -11,7 +11,7 @@ import scala.collection.mutable.ArrayBuffer
 
 trait OutputNode extends NetworkNode {
   
-  val inputs = ArrayBuffer[Connection]()
+  private val inputs = ArrayBuffer[Connection]()
   
   // When the Network flushes its outputs, they will display their data in a 
   // corresponding way; the exact implementation is left to each individual type.

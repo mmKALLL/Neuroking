@@ -9,8 +9,8 @@ import scala.collection.mutable.ArrayBuffer
 
 trait ProcessorNode extends NetworkNode {
   
-  val inputs = ArrayBuffer[Connection]()
-  val outputs = ArrayBuffer[Connection]()
+  private val inputs = ArrayBuffer[Connection]()
+  private val outputs = ArrayBuffer[Connection]()
   
   def receive(input: Any)
   
