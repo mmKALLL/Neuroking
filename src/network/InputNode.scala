@@ -10,6 +10,8 @@ import scala.collection.mutable.ArrayBuffer
 
 trait InputNode extends NetworkNode {
   
+  override implicit private[network] final val TYPE = "input"
+  
   private[network] def readInput
   
   // Inherited methods from NetworkNode

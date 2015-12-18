@@ -12,8 +12,9 @@ import scala.collection.mutable.ArrayBuffer
 
 trait HiddenNode extends NetworkNode {
   
+  override implicit private[network] final val TYPE = "hidden"
   
-  // Inherited methods from NetworkNode  
+  // Inherited methods from NetworkNode
   override def toString = super.toString +
                           "\noutputs:\n[\n" + outputs.foreach { _.toString + "\n" } + "]\n"
 }

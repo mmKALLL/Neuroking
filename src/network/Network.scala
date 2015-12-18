@@ -15,16 +15,30 @@ class Network {
   // TODO: specification implementation
   
   private val inputNodes = ArrayBuffer[InputNode]()
-  private val hiddenNodes = ArrayBuffer[HiddenNode]()
-  private val outputNodes = ArrayBuffer[OutputNode]()
+  private val hiddenNodes = ArrayBuffer[NetworkNode]()
+  private val outputNodes = ArrayBuffer[NetworkNode]()
   private var ready = false
   
-  def addNode(name: String) = {
-    // add id! how to determine type?
+  def getInputNodes = inputNodes
+  def getHiddenNodes = hiddenNodes
+  def getOutputNodes = outputNodes
+  
+  
+  def addNode(node: NetworkNode, name: String = "") = {
+    if (!name.isEmpty()) {
+      node.name = name
+    }
+    
+    node.TYPE match {
+      case "input" => inputNodes += node
+      case "hidden" => hiddenNodes += node
+      case "output" => outputNodes += node
+      case _ => throw new NotImplementedError("The Node.TYPE is invalid. Please file a bug report or contact the developer.")
+    }
   }
   
   // Starts the network: inputs gather input and things are passed along
-  def run = ???
+  def run = inputNodes.foreach { x => x.readInput() }
   
   // Once done, outputs receive a notification that they may output their data
   def flush = ???
