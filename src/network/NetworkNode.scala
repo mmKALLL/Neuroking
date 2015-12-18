@@ -29,3 +29,13 @@ trait NetworkNode {
                           "\nname: " + name
   
 }
+
+
+/**
+ * Used for calling functions which are not supposed to be used, i.e. receive for InputNode and send for OutputNode.
+ */
+class IllegalFunctionCallException(msg: String) extends Exception(msg) {
+  
+}
+
+

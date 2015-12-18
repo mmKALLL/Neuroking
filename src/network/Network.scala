@@ -26,3 +26,4 @@ class Network {
   def flush = ???
   
 }
+

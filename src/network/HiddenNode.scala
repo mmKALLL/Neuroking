@@ -10,7 +10,7 @@ import scala.collection.mutable.ArrayBuffer
  * 
  */
 
-trait ProcessorNode extends NetworkNode {
+trait HiddenNode extends NetworkNode {
   
   private val outputs = ArrayBuffer[Connection]()
   

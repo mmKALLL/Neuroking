@@ -16,13 +16,9 @@ trait InputNode extends NetworkNode {
   
   def connect(that: NetworkNode) = outputs += new Connection(this, that)
   
-  override def receive(data: Any, from: Connection) = throw new BadFunctionCallException("Cannot call receive for InputNodes!")
+  override def receive(data: Any, from: Connection) = throw new IllegalFunctionCallException("Cannot call receive for an InputNode!")
   
   override def toString = super.toString +
                           "\noutputs:\n" + outputs.foreach { _.toString + "\n" }
 
-}
-
-class BadFunctionCallException(msg: String) extends Exception(msg) {
-  
 }

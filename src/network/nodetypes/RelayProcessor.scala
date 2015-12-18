@@ -2,7 +2,7 @@ package neurotest
 package network
 package nodetypes
 
-import neurotest.network.ProcessorNode
+import neurotest.network.HiddenNode
 import neurotest.network.Connection
 
 
@@ -12,11 +12,11 @@ import neurotest.network.Connection
  * all its exits.
  * 
  */
-class RelayProcessor extends ProcessorNode {
+class RelayProcessor extends HiddenNode {
   val id: Int = (Math.random() * 10000).toInt
-
   var name: String = "RelayProcessor " + id
-
+  
+  // TODO: implementations
   def receive(data: Any, from: Connection): Unit = {
     ???
   }

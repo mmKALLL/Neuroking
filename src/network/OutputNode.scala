@@ -19,9 +19,9 @@ trait OutputNode extends NetworkNode {
   def out
   
   
-  // Inherited methods from NetworkNode, TODO: incomplete list of inherited methods
-  
+  // Inherited methods from NetworkNode
   def receive(data: Any, from: Connection) = outputQueue.enqueue(data)
+  override def send(data: Any, to: Connection*) = throw new IllegalFunctionCallException("Cannot call send for an OutputNode!")
   
   override def toString = super.toString
 }

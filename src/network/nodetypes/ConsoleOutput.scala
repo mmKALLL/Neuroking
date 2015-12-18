@@ -12,6 +12,7 @@ class ConsoleOutput extends OutputNode {
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "ConsoleOutput " + id
   
+  // TODO: implementations
   def connect(that: NetworkNode): Unit = {
     ???
   }
