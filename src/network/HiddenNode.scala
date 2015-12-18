@@ -12,7 +12,7 @@ import scala.collection.mutable.ArrayBuffer
 
 trait HiddenNode extends NetworkNode {
   
-  private val outputs = ArrayBuffer[Connection]()
+  private[network] val outputs = ArrayBuffer[Connection]()
   
   
   def connect(that: NetworkNode) = outputs += new Connection(this, that)

@@ -4,6 +4,7 @@ package nodetypes
 
 import neurotest.network.HiddenNode
 import neurotest.network.Connection
+import scala.collection.mutable.ArrayBuffer
 
 
 /**
@@ -13,13 +14,16 @@ import neurotest.network.Connection
  * 
  */
 class RelayProcessor extends HiddenNode {
+  
+  // TODO: id handler
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "RelayProcessor " + id
   
   // TODO: implementations
   def receive(data: Any, from: Connection): Unit = {
-    ???
+    send(data, outputs: _*)
   }
+
   
   
 }

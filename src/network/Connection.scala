@@ -11,8 +11,8 @@ package network
 class Connection(from: NetworkNode, to: NetworkNode) {
   
   // FIXME: proper id mechanism
-  val id: Int = ???
-  var name: String = id.toString
+  val id: Int = (Math.random() * 10000).toInt
+  var name: String = "Connection " + id
   
   def send(data: Any) = to.receive(data, this)
   
