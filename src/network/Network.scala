@@ -14,7 +14,9 @@ import scala.collection.mutable.ArrayBuffer
 class Network {
   // TODO: specification implementation
   
-  private val nodes = ArrayBuffer[NetworkNode]()
+  private val inputNodes = ArrayBuffer[InputNode]()
+  private val hiddenNodes = ArrayBuffer[HiddenNode]()
+  private val outputNodes = ArrayBuffer[OutputNode]()
   private var ready = false
   
   def addNode(name: String) = {

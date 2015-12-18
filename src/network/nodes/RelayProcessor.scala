@@ -15,7 +15,7 @@ class RelayProcessor extends HiddenNode {
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "RelayProcessor " + id
   
-  // TODO: implementations
+  // Inherited methods from HiddenNode
   private[network] def receive(data: Any, from: Connection): Unit = {
     send(data, outputs: _*)
   }

@@ -13,7 +13,7 @@ class ConsoleInput extends InputNode {
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "ConsoleInput " + id
   
-  private val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
+  private[this] val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
   // Members declared in network.nodetypes.InputNode
   private[network] def readInput: Unit = {

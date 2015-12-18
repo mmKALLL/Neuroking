@@ -2,6 +2,8 @@ package neurotest
 package network
 package nodes
 
+import scala.collection.mutable.Queue
+
 
 
 /**
@@ -10,13 +12,16 @@ package nodes
  * immediate, but rather will depend on the flush from Network.
  */
 class ConsoleOutput extends OutputNode {
+  
+  private[this] val outputQueue = Queue[Any]()
+  
   // TODO: id handler
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "ConsoleOutput " + id
 
-  // TODO: implementation  
   private[network] def out: Unit = {
-    ???
+    for (x <- (0 to outputQueue.length))
+      println(name + " output: " + outputQueue.dequeue.toString)
   }
   
 }
