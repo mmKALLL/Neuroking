@@ -1,10 +1,7 @@
-package network.nodetypes
-import neurotest.gui.Launcher.dmsg // The debug message function
-import scala.collection.mutable.ArrayBuffer
+package neurotest
+package network
 
-/**
- * A node which takes some sort of input and passes that along to HiddenNodes to process.
- */
+import scala.collection.mutable.ArrayBuffer
 
 /**
  * An InputNode receives input in some manner (e.g. console, file, visual data, ...),
@@ -13,9 +10,11 @@ import scala.collection.mutable.ArrayBuffer
 
 trait InputNode extends NetworkNode {
   
-  private val outputs = ArrayBuffer[Connection]()
+  protected val outputs = ArrayBuffer[Connection]()
   
   def readInput
+  
+  def connect(that: NetworkNode) = outputs += new Connection(this, that)
   
   override def toString = super.toString +
                           "\noutputs:\n" + outputs.foreach { _.toString + "\n" }

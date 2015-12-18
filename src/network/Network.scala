@@ -1,7 +1,7 @@
+package neurotest
 package network
 
 import scala.collection.mutable.ArrayBuffer
-import network.nodetypes.NetworkNode
 
 /**
  * This class represents a single network and controls the nodes 
@@ -17,6 +17,9 @@ class Network {
   private val nodes = ArrayBuffer[NetworkNode]()
   private var ready = false
   
+  def addNode(name: String) = {
+    
+  }
   
   def run = ???
   

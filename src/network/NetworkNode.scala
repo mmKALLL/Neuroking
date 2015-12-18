@@ -1,12 +1,11 @@
-package network.nodetypes
-import neurotest.gui.Launcher.dmsg
-import neurotest.network._
-import scala.collection.mutable.ArrayBuffer
+package neurotest
+package network
 
 
 /**
  * A trait that defines the nodes that are part of the neural network.
- * Nodes can create connections with each other.
+ * Nodesimport network.Connection
+ can create connections with each other.
  * 
  * Extensions of this class should implement internals for storing the connections.
  */
@@ -22,7 +21,7 @@ trait NetworkNode {
   // Methods for sending processed data to named connections and receiving it.
   // The processing of received data can then be done within a receive call.
   def send(data: Any, to: Connection*) = to.foreach(_.send(data))
-  def receive(data: Any)
+  def receive(data: Any, from: Connection)
   
   // Extending classes should call super.toString and add their own to this list, e.g. outwards connections etc.
   override def toString = "This network node is of type " + this.getClass + " and has the following information." +

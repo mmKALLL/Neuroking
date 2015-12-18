@@ -1,5 +1,6 @@
-package network.nodetypes
-import neurotest.gui.Launcher.dmsg // The debug message function
+package neurotest
+package network
+
 import scala.collection.mutable.ArrayBuffer
 
 /**
@@ -9,12 +10,12 @@ import scala.collection.mutable.ArrayBuffer
 
 trait ProcessorNode extends NetworkNode {
   
-  private val inputs = ArrayBuffer[Connection]()
   private val outputs = ArrayBuffer[Connection]()
   
-  def receive(input: Any)
+  
+  def connect(that: NetworkNode) = outputs += new Connection(this, that)
+  
   
   override def toString = super.toString +
-                          "\n\ninputs:\n" + inputs.foreach { _.toString + "\n" }
                           "\n\noutputs:\n" + outputs.foreach { _.toString + "\n" }
 }

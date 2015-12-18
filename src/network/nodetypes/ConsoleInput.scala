@@ -1,6 +1,7 @@
-package neurotest.network
-import neurotest.gui.Launcher.dmsg // The debug message function
-import network.nodetypes.InputNode
+package neurotest
+package network
+package nodetypes
+
 
 /**
  * At the time of running a Network, all ConsoleInputs will
@@ -13,15 +14,15 @@ class ConsoleInput extends InputNode {
   val id: Int = ???
   var name: String = ???
   
-  
+  private val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
   // Members declared in network.nodetypes.InputNode
-  def readInput: Unit = ???
+  def readInput: Unit = {
+    send(reader.readLine(), this.outputs: _*)
+  }
   
   // Members declared in network.nodetypes.NetworkNode
-  def connect(that: network.nodetypes.NetworkNode): Unit = ???
-  
-  def receive(data: Any): Unit = ???
+  def receive(data: Any, from: Connection): Unit = ???
   
   
 }

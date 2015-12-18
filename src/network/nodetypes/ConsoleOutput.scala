@@ -1,6 +1,7 @@
-package neurotest.network
-import neurotest.gui.Launcher.dmsg // The debug message function
-import network.nodetypes.OutputNode
+package neurotest
+package network
+package nodetypes
+
 
 /**
  * A ConsoleOutput is a type of output node that will print all
@@ -8,5 +9,5 @@ import network.nodetypes.OutputNode
  * immediate, but rather will depend on the flush from Network.
  */
 class ConsoleOutput extends OutputNode {
-  
+  // TODO: implement missing functions
 }

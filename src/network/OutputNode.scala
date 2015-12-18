@@ -1,6 +1,7 @@
-package network.nodetypes
-import neurotest.gui.Launcher.dmsg
-import scala.collection.mutable.ArrayBuffer
+package neurotest
+package network
+
+import scala.collection.mutable.Queue
 
 
 /**
@@ -11,13 +12,16 @@ import scala.collection.mutable.ArrayBuffer
 
 trait OutputNode extends NetworkNode {
   
-  private val inputs = ArrayBuffer[Connection]()
+  val outputQueue = Queue[Any]()
   
   // When the Network flushes its outputs, they will display their data in a 
   // corresponding way; the exact implementation is left to each individual type.
   def out
   
   
-  override def toString = super.toString +
-                          "\ninputs:\n" + inputs.foreach { _.toString + "\n" }
+  // Inherited methods from NetworkNode, TODO: incomplete list of inherited methods
+  
+  def receive(data: Any, from: Connection) = outputQueue.enqueue(data)
+  
+  override def toString = super.toString
 }

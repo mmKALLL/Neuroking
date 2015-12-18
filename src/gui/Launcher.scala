@@ -1,4 +1,6 @@
-package neurotest.gui
+package neurotest
+package gui
+
 
 /**
  * A simple wrapper for launching the software and displaying debug messages.
@@ -14,6 +16,7 @@ object Launcher {
   def main(args: Array[String]) {
     debug = args.filter(_.contains("-d")).length >= 1
     dmsg("debug mode enabled" + "asd " + 123, 1234, "aaaa", new Object)
+    new TestClass()
   }
   
   def dmsg(in: Any*) {

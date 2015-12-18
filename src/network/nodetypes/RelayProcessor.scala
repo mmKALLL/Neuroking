@@ -1,6 +1,7 @@
-package neurotest.network
-import neurotest.gui.Launcher.dmsg // The debug message function
-import network.nodetypes.ProcessorNode
+package network.nodetypes
+
+import neurotest.network.ProcessorNode
+
 
 /**
  * A RelayProcessor is a type of processor that does
@@ -9,5 +10,5 @@ import network.nodetypes.ProcessorNode
  * 
  */
 class RelayProcessor extends ProcessorNode {
-  
+  // TODO: implement missing functions
 }
