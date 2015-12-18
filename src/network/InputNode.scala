@@ -10,9 +10,7 @@ import scala.collection.mutable.ArrayBuffer
 
 trait InputNode extends NetworkNode {
   
-  override implicit private[network] final val TYPE = "input"
-  
-  private[network] def readInput
+  private[network] def readInput()
   
   // Inherited methods from NetworkNode
   override private[network] def receive(data: Any, from: Connection) = throw new IllegalFunctionCallException("Cannot call receive for an InputNode!")

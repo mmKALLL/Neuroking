@@ -12,8 +12,6 @@ import scala.collection.mutable.Queue
 
 trait OutputNode extends NetworkNode {
   
-  override implicit private[network] final val TYPE = "output"
-  
   protected val outputQueue = Queue[Any]()
   
   // When the Network flushes its outputs, they will display their data in a 

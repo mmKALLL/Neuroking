@@ -16,7 +16,7 @@ class ConsoleInput extends InputNode {
   private[this] val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
   // Members declared in network.nodetypes.InputNode
-  private[network] def readInput: Unit = {
+  private[network] def readInput(): Unit = {
     send(reader.readLine(), this.outputs: _*)
   }
   

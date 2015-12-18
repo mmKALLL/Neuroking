@@ -14,10 +14,6 @@ import scala.collection.mutable.ArrayBuffer
 
 trait NetworkNode {
   
-  // Method for determining type when adding a node.
-  // Modified only in InputNode, HiddenNode, and OutputNode
-  implicit private[network] val TYPE = "undefined"
-  
   protected val outputs = ArrayBuffer[Connection]()
   
   val id: Int
