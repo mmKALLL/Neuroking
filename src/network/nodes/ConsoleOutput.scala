@@ -1,6 +1,7 @@
 package neurotest
 package network
-package nodetypes
+package nodes
+
 
 
 /**
@@ -12,13 +13,9 @@ class ConsoleOutput extends OutputNode {
   // TODO: id handler
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "ConsoleOutput " + id
-  
-  // TODO: implementations
-  def connect(that: NetworkNode): Unit = {
-    ???
-  }
-  
-  def out: Unit = {
+
+  // TODO: implementation  
+  private[network] def out: Unit = {
     ???
   }
   

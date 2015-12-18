@@ -1,14 +1,10 @@
 package neurotest
 package network
-package nodetypes
-
-import neurotest.network.HiddenNode
-import neurotest.network.Connection
-import scala.collection.mutable.ArrayBuffer
+package nodes
 
 
 /**
- * A RelayProcessor is a type of processor that does
+ * A RelayProcessor is a type of HiddenNode that does
  * nothing but forward all received data onwards to
  * all its exits.
  * 
@@ -20,7 +16,7 @@ class RelayProcessor extends HiddenNode {
   var name: String = "RelayProcessor " + id
   
   // TODO: implementations
-  def receive(data: Any, from: Connection): Unit = {
+  private[network] def receive(data: Any, from: Connection): Unit = {
     send(data, outputs: _*)
   }
 

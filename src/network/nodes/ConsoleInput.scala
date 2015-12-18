@@ -1,7 +1,6 @@
-package neurotest
+package neurotest 
 package network
-package nodetypes
-
+package nodes
 
 /**
  * At the time of running a Network, all ConsoleInputs will
@@ -17,7 +16,7 @@ class ConsoleInput extends InputNode {
   private val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
   // Members declared in network.nodetypes.InputNode
-  def readInput: Unit = {
+  private[network] def readInput: Unit = {
     send(reader.readLine(), this.outputs: _*)
   }
   

@@ -12,12 +12,8 @@ import scala.collection.mutable.ArrayBuffer
 
 trait HiddenNode extends NetworkNode {
   
-  private[network] val outputs = ArrayBuffer[Connection]()
   
-  
-  def connect(that: NetworkNode) = outputs += new Connection(this, that)
-  
-  
+  // Inherited methods from NetworkNode  
   override def toString = super.toString +
-                          "\n\noutputs:\n" + outputs.foreach { _.toString + "\n" }
+                          "\noutputs:\n[\n" + outputs.foreach { _.toString + "\n" } + "]\n"
 }

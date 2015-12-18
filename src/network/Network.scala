@@ -18,11 +18,13 @@ class Network {
   private var ready = false
   
   def addNode(name: String) = {
-    
+    // add id! how to determine type?
   }
   
+  // Starts the network: inputs gather input and things are passed along
   def run = ???
   
+  // Once done, outputs receive a notification that they may output their data
   def flush = ???
   
 }

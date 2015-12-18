@@ -10,15 +10,12 @@ import scala.collection.mutable.ArrayBuffer
 
 trait InputNode extends NetworkNode {
   
-  protected val outputs = ArrayBuffer[Connection]()
+  private[network] def readInput
   
-  def readInput
-  
-  def connect(that: NetworkNode) = outputs += new Connection(this, that)
-  
-  override def receive(data: Any, from: Connection) = throw new IllegalFunctionCallException("Cannot call receive for an InputNode!")
+  // Inherited methods from NetworkNode
+  override private[network] def receive(data: Any, from: Connection) = throw new IllegalFunctionCallException("Cannot call receive for an InputNode!")
   
   override def toString = super.toString +
-                          "\noutputs:\n" + outputs.foreach { _.toString + "\n" }
+                          "\noutputs:\n[\n" + outputs.foreach { _.toString + "\n" } + "]\n"
 
 }

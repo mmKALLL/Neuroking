@@ -14,7 +14,7 @@ class Connection(from: NetworkNode, to: NetworkNode) {
   val id: Int = (Math.random() * 10000).toInt
   var name: String = "Connection " + id
   
-  def send(data: Any) = to.receive(data, this)
+  private[network] def send(data: Any) = to.receive(data, this)
   
   override def toString = "Connection " + this.name + " connected from " + from.name + " to " + to.name + "."
   

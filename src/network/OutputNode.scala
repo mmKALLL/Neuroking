@@ -12,16 +12,19 @@ import scala.collection.mutable.Queue
 
 trait OutputNode extends NetworkNode {
   
-  val outputQueue = Queue[Any]()
+  protected val outputQueue = Queue[Any]()
   
   // When the Network flushes its outputs, they will display their data in a 
   // corresponding way; the exact implementation is left to each individual type.
-  def out
+  private[network] def out
   
   
   // Inherited methods from NetworkNode
-  def receive(data: Any, from: Connection) = outputQueue.enqueue(data)
-  override def send(data: Any, to: Connection*) = throw new IllegalFunctionCallException("Cannot call send for an OutputNode!")
+  override def connect(that: NetworkNode) = throw new IllegalFunctionCallException("Cannot call connect for an OutputNode!")
+  
+  override private[network] def send(data: Any, to: Connection*) = throw new IllegalFunctionCallException("Cannot call send for an OutputNode!")
+  override private[network] def receive(data: Any, from: Connection) = outputQueue.enqueue(data)
   
   override def toString = super.toString
 }
+
