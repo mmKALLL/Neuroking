@@ -1,6 +1,9 @@
-package network.nodetypes
+package neurotest
+package network
+package nodetypes
 
 import neurotest.network.ProcessorNode
+import neurotest.network.Connection
 
 
 /**
@@ -10,5 +13,13 @@ import neurotest.network.ProcessorNode
  * 
  */
 class RelayProcessor extends ProcessorNode {
-  // TODO: implement missing functions
+  val id: Int = (Math.random() * 10000).toInt
+
+  var name: String = "RelayProcessor " + id
+
+  def receive(data: Any, from: Connection): Unit = {
+    ???
+  }
+  
+  
 }

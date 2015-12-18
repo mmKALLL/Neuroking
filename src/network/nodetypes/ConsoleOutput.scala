@@ -9,5 +9,15 @@ package nodetypes
  * immediate, but rather will depend on the flush from Network.
  */
 class ConsoleOutput extends OutputNode {
-  // TODO: implement missing functions
+  val id: Int = (Math.random() * 10000).toInt
+  var name: String = "ConsoleOutput " + id
+  
+  def connect(that: NetworkNode): Unit = {
+    ???
+  }
+  
+  def out: Unit = {
+    ???
+  }
+  
 }

@@ -11,8 +11,8 @@ package nodetypes
 class ConsoleInput extends InputNode {
   
   // TODO: id handler
-  val id: Int = ???
-  var name: String = ???
+  val id: Int = (Math.random() * 10000).toInt
+  var name: String = "ConsoleInput " + id
   
   private val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
@@ -20,9 +20,5 @@ class ConsoleInput extends InputNode {
   def readInput: Unit = {
     send(reader.readLine(), this.outputs: _*)
   }
-  
-  // Members declared in network.nodetypes.NetworkNode
-  def receive(data: Any, from: Connection): Unit = ???
-  
   
 }
