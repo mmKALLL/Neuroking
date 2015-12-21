@@ -15,7 +15,7 @@ object Launcher {
   
   def main(args: Array[String]) {
     debug = args.filter(_.contains("-d")).length >= 1
-    dmsg("debug mode enabled" + "asd " + 123, 1234, "aaaa", new Object)
+//    dmsg("debug mode enabled" + "asd " + 123, 1234, "aaaa", new Object)
     new TestClass()
   }
   

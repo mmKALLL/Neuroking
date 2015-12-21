@@ -12,7 +12,7 @@ import neurotest.gui.Launcher.dmsg
  * ready to output, at which point it flushes the output nodes' data.
  *
  */
-class Network {
+class Network(name: String = (Math.random * 99999).toInt.toString) {
 
   private val inputNodes = ArrayBuffer[InputNode]()
   private val hiddenNodes = ArrayBuffer[HiddenNode]()
@@ -42,6 +42,16 @@ class Network {
 
   // Once done, outputs receive a notification that they may output their data
   def flush = outputNodes.foreach { _.out }
-
+  
+  
+  override def toString() = "This network has the following information:\n" +
+                            "name: " + name + "\n" +
+                            "List of input nodes:\n" + 
+                            inputNodes.foreach(_.toString) +
+                            "\n\nList of hidden nodes:\n" +
+                            hiddenNodes.foreach(_.toString) +
+                            "\n\nList of output nodes:\n" +
+                            outputNodes.foreach(_.toString) +
+                            "\n\n"
 }
 

@@ -11,6 +11,16 @@ import neurotest.system._
  * for playing around with the system.
  */
 class TestClass {
-  new Network().addNode(new ConsoleInput())
-  new Network().addNode(new ConsoleInput(), "asd123")
+  
+  val test = new System()
+  
+  println(test.toString)
+  
+  
+  test.addNetwork
+  
+  // FIXME: a good system for accessing nodes to add connections
+  // TODO: adding nodes to latest network is annoying
+  test.addNode(new ConsoleInput())
+  
 }
