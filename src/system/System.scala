@@ -15,7 +15,7 @@ import neurotest.gui.Launcher.dmsg // The debug message function
 
 class System {
   // TODO: A single network system
-  def addNode(name: String/*, nodetype??*/) = ???
+  
   
   
   // TODO: id system for nodes

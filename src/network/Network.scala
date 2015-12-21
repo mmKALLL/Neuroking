@@ -2,6 +2,7 @@ package neurotest
 package network
 
 import scala.collection.mutable.ArrayBuffer
+import neurotest.gui.Launcher.dmsg
 
 /**
  * This class represents a single network and controls the nodes
@@ -12,7 +13,6 @@ import scala.collection.mutable.ArrayBuffer
  *
  */
 class Network {
-  // TODO: specification implementation
 
   private val inputNodes = ArrayBuffer[InputNode]()
   private val hiddenNodes = ArrayBuffer[HiddenNode]()
@@ -24,28 +24,19 @@ class Network {
   def getOutputNodes = outputNodes
   
   // Adds a node into the network, depending on type.
-  def addNode(node: InputNode, name: String = "") = {
+  def addNode(node: NetworkNode, name: String = "") = {
     if (!name.isEmpty()) {
       node.name = name
     }
-    inputNodes += node
-  }
-  
-  def addNode(node: HiddenNode, name: String = "") = {
-    if (!name.isEmpty()) {
-      node.name = name
+    node match {
+      case node: InputNode => inputNodes += node
+      case node: HiddenNode => hiddenNodes += node
+      case node: OutputNode => outputNodes += node
+      case _ => throw new Exception("The type of node " + node.name + " is not supported!")
     }
-    hiddenNodes += node
   }
   
-  def addNode(node: OutputNode, name: String = "") = {
-    if (!name.isEmpty()) {
-      node.name = name
-    }
-    outputNodes += node
-  }
-  
-  
+  // FIXME: for-comprehensions
   // Starts the network: inputs gather input and things are passed along
   def run = inputNodes.foreach { _.readInput() }
 
