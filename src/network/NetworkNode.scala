@@ -3,11 +3,9 @@ package network
 
 import scala.collection.mutable.ArrayBuffer
 
-
 /**
  * A trait that defines the nodes that are part of the neural network.
- * Nodesimport network.Connection
- can create connections with each other.
+ * Nodes can create connections with each other.
  * 
  * Extensions of this class should implement internals for storing the connections.
  */
