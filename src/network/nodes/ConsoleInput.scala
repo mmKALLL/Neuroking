@@ -2,6 +2,7 @@ package neurotest
 package network
 package nodes
 
+
 /**
  * At the time of running a Network, all ConsoleInputs will
  * on their turn take a single line of input from the console,

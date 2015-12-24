@@ -19,8 +19,6 @@ class TestClass {
   
   test.addNetwork
   
-  // FIXME: a good system for accessing nodes to add connections
-  // TODO: adding nodes to latest network is annoying
   test.addNode(new ConsoleInput())
   
 }
