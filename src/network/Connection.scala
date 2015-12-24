@@ -2,7 +2,6 @@ package neurotest
 package network
 
 
-
 /**
  * A connection is a one-way link between two nodes, passing data.
  * 

@@ -21,4 +21,7 @@ class TestClass {
   
   test.addNode(new ConsoleInput())
   
+  println(test)
+  
+  
 }
