@@ -20,9 +20,9 @@ trait OutputNode extends NetworkNode {
   
   
   // Inherited methods from NetworkNode
-  override def connect(that: NetworkNode) = throw new IllegalFunctionCallException("Cannot call connect for an OutputNode!")
+  override def connect(that: NetworkNode) = throw new UnsupportedOperationException("Cannot call connect for an OutputNode!")
   
-  override private[network] def send(data: Any, to: Connection*) = throw new IllegalFunctionCallException("Cannot call send for an OutputNode!")
+  override private[network] def send(data: Any, to: Connection*) = throw new UnsupportedOperationException("Cannot call send for an OutputNode!")
   override private[network] def receive(data: Any, from: Connection) = outputQueue.enqueue(data)
   
   override def toString = super.toString

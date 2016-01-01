@@ -13,9 +13,10 @@ trait InputNode extends NetworkNode {
   private[network] def readInput()
   
   // Inherited methods from NetworkNode
-  override private[network] def receive(data: Any, from: Connection) = throw new IllegalFunctionCallException("Cannot call receive for an InputNode!")
+  override private[network] def receive(data: Any, from: Connection) = throw new UnsupportedOperationException("Cannot call receive for an InputNode!")
   
-  override def toString = super.toString +
-                          "\noutputs:\n[\n" + outputs.foreach { _.toString + "\n" } + "]\n"
+  override def toString = if (outputs.isEmpty) super.toString + ", connected to: []"
+                          else  super.toString + ", connected to: [" + outputs.map(_.to.name).reduceLeft(_ + ", " + _) + "]"
+                          
 
 }

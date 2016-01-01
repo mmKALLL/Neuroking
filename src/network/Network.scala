@@ -12,14 +12,14 @@ import neurotest.gui.Launcher.dmsg
  * ready to output, at which point it flushes the output nodes' data.
  *
  */
-class Network(name: String = (Math.random * 99999).toInt.toString) {
+class Network(var name: String = (Math.random * 99999).toInt.toString) {
 
   private val inputNodes = ArrayBuffer[InputNode]()
   private val hiddenNodes = ArrayBuffer[HiddenNode]()
   private val outputNodes = ArrayBuffer[OutputNode]()
   private var ready = false
 
-  // EXTEND: a better system for accessing nodes to add connections
+  // FIXME: a better system for accessing nodes to add connections
   def getInputNodes = inputNodes
   def getHiddenNodes = hiddenNodes
   def getOutputNodes = outputNodes
@@ -37,7 +37,7 @@ class Network(name: String = (Math.random * 99999).toInt.toString) {
     }
   }
   
-  // FIXME: for-comprehensions
+  // EXTEND: for-comprehensions are slow; use while-loops instead
   // Starts the network: inputs gather input and things are passed along
   def run = inputNodes.foreach { _.readInput() }
 
@@ -45,14 +45,16 @@ class Network(name: String = (Math.random * 99999).toInt.toString) {
   def flush = outputNodes.foreach { _.out }
   
   
-  override def toString() = "This network has the following information:\n" +
-                            "name: " + name + "\n" +
+  override def toString() = "Network, name:" + name + "\n" +
                             "List of input nodes:\n" + 
-                            inputNodes.foreach(_.toString) +
-                            "\n\nList of hidden nodes:\n" +
-                            hiddenNodes.foreach(_.toString) +
-                            "\n\nList of output nodes:\n" +
-                            outputNodes.foreach(_.toString) +
-                            "\n\n"
+                            (if (this.inputNodes.isEmpty) "[]"
+                            else "[" + this.inputNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +
+                            "\nList of hidden nodes:\n" +
+                            (if (this.hiddenNodes.isEmpty) "[]"
+                            else "[" + this.hiddenNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +
+                            "\nList of output nodes:\n" +
+                            (if (this.outputNodes.isEmpty) "[]"
+                            else "[" + this.outputNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +
+                            ""
 }
 

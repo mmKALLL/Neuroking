@@ -7,14 +7,13 @@ package network
  * 
  */
 
-class Connection(from: NetworkNode, to: NetworkNode) {
+class Connection(private[network] val from: NetworkNode, private[network] val to: NetworkNode) {
   
-  // FIXME: proper id mechanism
-  val id: Int = (Math.random() * 10000).toInt
+  val id: Int = neurotest.system.System.nextID
   var name: String = "Connection " + id
   
   private[network] def send(data: Any) = to.receive(data, this)
   
-  override def toString = "Connection " + this.name + " connected from " + from.name + " to " + to.name + "."
+  override def toString = "Connection; name: " + this.name + ", from: " + from.name + ", to: " + to.name + "."
   
 }

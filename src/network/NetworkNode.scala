@@ -2,19 +2,22 @@ package neurotest
 package network
 
 import scala.collection.mutable.ArrayBuffer
+import neurotest.system.System
 
 /**
  * A trait that defines the nodes that are part of the neural network.
  * Nodes can create connections with each other.
  * 
- * Extensions of this class should implement internals for storing the connections.
+ * Extensions of this class may implement different internals for storing the connections.
+ * First it was specified as mandatory but I believe that that would be premature optimization,
+ * even though executing the network should be as fast as possible.
  */
 
 trait NetworkNode {
   
   protected val outputs = ArrayBuffer[Connection]()
   
-  val id: Int
+  val id: Int = System.nextID()
   var name: String
   
   // One-way connection from this to the target node.
@@ -26,18 +29,8 @@ trait NetworkNode {
   private[network] def receive(data: Any, from: Connection)
   
   // Extending classes should call super.toString and add their own to this list, e.g. outwards connections etc.
-  override def toString = "This network node is of type " + this.getClass + " and has the following information." +
-                          "\nid: " + id +
-                          "\nname: " + name
+  // For nodes, toString should be a single-line string.
+  override def toString = "Network node, type: " + this.getClass.getSimpleName + ", id: " + id + ", name: " + name
   
 }
-
-
-/**
- * Used for calling functions which are not supposed to be used, i.e. receive for InputNode and send for OutputNode.
- */
-class IllegalFunctionCallException(msg: String) extends Exception(msg) {
-  
-}
-
 

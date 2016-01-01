@@ -9,11 +9,9 @@ package nodes
  * all its exits.
  * 
  */
-class RelayProcessor extends HiddenNode {
+class RelayProcessor(var name: String = "") extends HiddenNode {
   
-  // TODO: id handler
-  val id: Int = (Math.random() * 10000).toInt
-  var name: String = "RelayProcessor " + id
+  if (name.isEmpty()) name = "RelayProcessor " + id
   
   // Inherited methods from HiddenNode
   private[network] def receive(data: Any, from: Connection): Unit = {

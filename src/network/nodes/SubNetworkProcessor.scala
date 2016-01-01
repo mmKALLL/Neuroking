@@ -1,4 +1,6 @@
-package network.nodes
+package neurotest
+package network
+package nodes
 
 /**
  * @author mmKALLL
@@ -7,6 +9,12 @@ package network.nodes
  * network within itself, and whose inputs and outputs are connected
  * to the underlying network's input and output nodes.
  */
-class SubNetworkProcessor {
+class SubNetworkProcessor(var name: String = "") extends HiddenNode {
   // TODO: implement SubNetworkProcessor
+  if (name.isEmpty()) name = "SubNetworkProcessor " + id
+  
+  private[network] def receive(data: Any, from: Connection): Unit = {
+    ???
+  }
+  
 }
