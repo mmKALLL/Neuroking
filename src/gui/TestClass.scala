@@ -86,7 +86,7 @@ class TestClass {
   test.connect(test.latestNetwork, "hid22", "out2")
   
   
-  // Test number 5:   [???]
+  // Test number 5:   [11112233, 111233, 12]
   test.addNetwork("5")
   test.addNode(new ConsoleInput("in1"), new ConsoleInput("in2"), new ConsoleInput("in3"), 
       new RelayProcessor("hid11"), new RelayProcessor("hid12"), new RelayProcessor("hid13"),
