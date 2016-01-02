@@ -20,7 +20,7 @@ import neurotest.network._
  */
 
 class System(var name: String = (Math.random * 99999).toInt.toString) {
-  
+  // TODO: Probability density function nodes and fitness evolution
   private val networks = ArrayBuffer[Network]()
   private def allNetworkNodes(network: Network = latestNetwork) = network.getInputNodes ++ network.getHiddenNodes ++ network.getOutputNodes
   
