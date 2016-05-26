@@ -128,7 +128,7 @@ class TestClass {
   // TODO: Should not need to flush manually.
   // TODO: Test should be automated.
   for (x <- test.getAllNetworks) {
-    println("\ntest case " + x.name + "; " + x.getInputNodes.length + " nodes")
+    println("\ntest case " + x.name + "; " + x.getInputNodes.length + " input nodes")
     x.run
     x.flush
   }
