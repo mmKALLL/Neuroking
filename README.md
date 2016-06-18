@@ -19,8 +19,8 @@ There's not a whole lot going on yet, but stay tuned! <br />
 Planned for 0.2:
 - Create Systems - they will manage the network and optimize the parameters to maximise a fitness function.
 - Nodes with optimizable parameters
-- Nodes which pass values between 0.0 and 1.0 along the network
-- Weak and strong connections
+- Nodes which pass sums of their inputs to their outputs
+- Weak and strong weighted connections
 
 Planned for 0.3:
 - Systems should be configurable
@@ -34,3 +34,16 @@ Planned for 0.4:
 Planned for 0.5:
 - Output generation-by-generation data into customizable "graphs" (exportable data points are sufficient)
 - More ways to input (previous gen, rows from a file, part of the screen as RGB values)
+
+Planned for 0.6:
+- Nodes with parametrized biases and thresholds between different value ranges (with e.g. sigmoid functions)
+- Systems of Systems; subnetworks
+
+Planned for 0.7:
+- Config files
+- Multiple modes of operation (interactive, let it run x generations, debug, hands-off, ...)
+- Brief tutorial and documentation
+
+Planned for 0.8:
+- Expanded test suite with extensive integration tests
+- Start work on connecting the core with an arbitrary GUI
