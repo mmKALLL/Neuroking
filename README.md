@@ -1,6 +1,7 @@
 #Neuroking
 A neural network design tool, now at version 0.1.0.0! <br />
 Readme last updated on 2016-06-18. <br />
+Currently working on: Refactoring the high-level architecture
 
 Neuroking aims to accomplish two things: <br />
 1) Make it easy for anyone to utilize the power of machine learning <br />
@@ -37,7 +38,7 @@ Planned for 0.5:
 
 Planned for 0.6:
 - Nodes with parametrized biases and thresholds between different value ranges (with e.g. sigmoid functions)
-- Systems of Systems; subnetworks
+- Systems of Systems; multiple interconnected networks
 
 Planned for 0.7:
 - Config files
@@ -47,3 +48,21 @@ Planned for 0.7:
 Planned for 0.8:
 - Expanded test suite with extensive integration tests
 - Start work on connecting the core with an arbitrary GUI
+
+
+##Release notes:
+
+0.1:
+- Initial release
+- Can create nodes and insert them into a network
+- Three node types
+    - ConsoleInput - takes in text from the console and passes it to connected nodes
+    - RelayProcessor - passes all input data unmodified to outputs
+    - ConsoleOutput - prints all received input to the console
+- Much of the structural backbone is in place
+
+## Known issues:
+
+- Output nodes are processed in the order they were added into the network.
+- Builds sometimes fail to recognize package structure
+- Too many todos :)
