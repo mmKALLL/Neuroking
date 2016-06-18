@@ -25,6 +25,7 @@ Planned for 0.2:
 Planned for 0.3:
 - Systems should be configurable
 - More node types
+- Automated and easily expandable test suite
 
 Planned for 0.4:
 - More representations of output data (graphical RGB, graph, output to file)
