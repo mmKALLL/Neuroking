@@ -10,7 +10,7 @@ package nodes
  * to the underlying network's input and output nodes.
  */
 class SubNetworkProcessor(var name: String = "") extends HiddenNode {
-  // TODO: implement SubNetworkProcessor
+  // TODO: Implement SubNetworkProcessor
   if (name.isEmpty()) name = "SubNetworkProcessor " + id
   
   private[network] def receive(data: Any, from: Connection): Unit = {

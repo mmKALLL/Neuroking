@@ -19,7 +19,7 @@ class Network(var name: String = (Math.random * 99999).toInt.toString) {
   private val outputNodes = ArrayBuffer[OutputNode]()
   private var ready = false
 
-  // FIXME: a better system for accessing nodes to add connections
+  // FIXME: A better system for accessing nodes to add connections
   def getInputNodes = inputNodes
   def getHiddenNodes = hiddenNodes
   def getOutputNodes = outputNodes
@@ -37,7 +37,8 @@ class Network(var name: String = (Math.random * 99999).toInt.toString) {
     }
   }
   
-  // EXTEND: for-comprehensions are slow; use while-loops instead
+  // EXTEND: For-comprehensions are slow; use while-loops instead
+  // TODO: Running and flushing should be done on the System level
   // Starts the network: inputs gather input and things are passed along
   def run = inputNodes.foreach { _.readInput() }
 

@@ -122,10 +122,10 @@ class TestClass {
   // Setting up the console tests.
   private val oldOut = java.lang.System.out
   private val baos = new ByteArrayOutputStream()
-//  java.lang.System.setOut(new PrintStream(baos))
+  java.lang.System.setOut(new PrintStream(baos))
   
   
-  // TODO: Should not need to flush manually.
+  // TODO: Should not need to flush the System manually.
   // TODO: Test should be automated.
   for (x <- test.getAllNetworks) {
     println("\ntest case " + x.name + "; " + x.getInputNodes.length + " nodes")
@@ -134,11 +134,12 @@ class TestClass {
   }
   
   // Set the console back.
+  var result = baos.toString()
   java.lang.System.out.flush()
   java.lang.System.setOut(oldOut)
   
-  println(baos.toString())
-//  assert(baos.toString() == "out1 output: asdf\n")
+  println(result)
+  //assert(result == "out1 output: asdf\n")
   
 }
 

@@ -14,13 +14,13 @@ import neurotest.network._
  * data mining, deep learning, and other things that happen as a function of time.
  * 
  * Any UI implementations should ALWAYS initialize at least one network in a System before trying
- * to access them.
+ * to access them. (...TODO: Initialize network in System, add getNetworks method)
  * 
  * Parameters:
  */
 
 class System(var name: String = (Math.random * 99999).toInt.toString) {
-  // TODO: Probability density function nodes and fitness evolution
+  // TODO: Probability density function nodes and fitness evaluation
   private val networks = ArrayBuffer[Network]()
   private def allNetworkNodes(network: Network = latestNetwork) = network.getInputNodes ++ network.getHiddenNodes ++ network.getOutputNodes
   
@@ -33,7 +33,7 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   def removeNetwork(index: Int) = networks.remove(index)
   def getAllNetworks = networks
   
-//  // TODO: addNode overloading is not elegant
+//  // TODO: Overloading of addNode is not elegant
 //  def addNode(node: NetworkNode) = latestNetwork.addNode(node, "")
 //  def addNode(node: NetworkNode, name: String) = latestNetwork.addNode(node, name)
 //  def addNode(network: Network, node: NetworkNode) = network.addNode(node, "")
@@ -43,8 +43,8 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   def addNode(network: Network, node: NetworkNode*) = node.foreach(network.addNode(_))
   def addNode(node: NetworkNode*) = node.foreach(latestNetwork.addNode(_))
   
-  // TODO: node connect overloading is not elegant
-  // TODO: node connect is too hacky
+  // TODO: Node connect overloading is not elegant
+  // TODO: Node connect is too hacky
   def connect(network: Network, from: String, to: String) = {
     val nodes = allNetworkNodes(network)
     nodes.find(_.name == from) match {
@@ -58,8 +58,8 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   
   
   
-  // TODO: feedback loop, genetics, etc
-  // TODO: id system for nodes
+  // TODO: Feedback loop, genetics, etc
+  // TODO: ID system for nodes
   
   // EXTEND: Indentation for the .toString newlines.
   // 
@@ -70,6 +70,6 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
 }
 
 object System {
-  // TODO: better id implementation.
+  // TODO: Better id implementation.
   def nextID() = (Math.random * 99999).toInt
 }
