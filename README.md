@@ -25,3 +25,11 @@ Planned for 0.2:
 Planned for 0.3:
 - Systems should be configurable
 - More node types
+
+Planned for 0.4:
+- More representations of output data (graphical RGB, graph, output to file)
+- The ability to save each generation's data
+
+Planned for 0.5:
+- Output generation-by-generation data into customizable "graphs" (exportable data points are sufficient)
+- More ways to input (previous gen, rows from a file, part of the screen as RGB values)
