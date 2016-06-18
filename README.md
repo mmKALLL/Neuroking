@@ -1,19 +1,19 @@
 #Neuroking
-A neural network design tool, now at version 0.1.0.0! 
-Readme last updated on 2016-06-18.
+A neural network design tool, now at version 0.1.0.0! <br />
+Readme last updated on 2016-06-18. <br />
 
-Neuroking aims to accomplish two things:
-1) Make it easy for anyone to utilize the power of machine learning
-2) Allow people to share their creations with others
+Neuroking aims to accomplish two things: <br />
+1) Make it easy for anyone to utilize the power of machine learning <br />
+2) Allow people to share their creations with others <br />
 
-In my opinion, it should be possible to accomplish these goals while making the source code available.
-If it becomes popular, I aim to allow people to monetize their modules in an app-store style.
+In my opinion, it should be possible to accomplish these goals while making the source code available. <br />
+If it becomes popular, I aim to allow people to monetize their modules in an app-store style. <br />
 
-The basic structure is more or less ready, but will most likely go through a couple of reiteration cycles to ensure maximal quality.
+The basic structure is more or less ready, but will most likely go through a couple of reiteration cycles to ensure maximal quality. <br />
 
-Since this is a project which I'm only working on during my free time, it will most likely take a while to flesh out new features... However, said features will definitely be full of awesome.
+Since this is a project which I'm only working on during my free time, it will most likely take a while to flesh out new features... However, said features will definitely be full of awesome. <br />
 
-There's not a whole lot going on yet, but stay tuned!
+There's not a whole lot going on yet, but stay tuned! <br />
 
 ##Roadmap
 Planned for 0.2:
