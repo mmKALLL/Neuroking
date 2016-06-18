@@ -3,6 +3,8 @@ A neural network design tool, now at version 0.1.0.0! <br />
 Readme last updated on 2016-06-18. <br />
 Currently working on: Refactoring the high-level architecture
 
+Note to self: Processor nodes vs Hidden nodes; rename package structure to Neuroking
+
 Neuroking aims to accomplish two things: <br />
 1) Make it easy for anyone to utilize the power of machine learning <br />
 2) Allow people to share their creations with others <br />
