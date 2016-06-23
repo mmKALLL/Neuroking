@@ -62,7 +62,6 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   // TODO: ID system for nodes
   
   // EXTEND: Indentation for the .toString newlines.
-  // 
   override def toString() = if (this.networks.isEmpty) "System " + name + " has no networks.\n\n"
                             else "System " + name + " has the following networks:\n" + 
                                   this.networks.map("{\n" + _.toString + "\n}").reduceLeft(_ + "\n" + _) + "\n"
@@ -73,3 +72,4 @@ object System {
   // TODO: Better id implementation.
   def nextID() = (Math.random * 99999).toInt
 }
+

@@ -12,6 +12,7 @@ class ConsoleInput(var name: String = "") extends InputNode {
   
   if (name.equals("")) name = "ConsoleInput " + id
   
+  // EXTEND: Move this kind of instantiation to System-level
   private[this] val reader = new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in))
   
   // Members declared in network.nodetypes.InputNode
