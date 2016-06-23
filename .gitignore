@@ -1,5 +1,3 @@
-/bin
-
 # Mac stuff
 .DS_Store
 .DS_Store?
@@ -23,6 +21,7 @@ project/plugins/project/
 # Scala-IDE specific
 .scala_dependencies
 .worksheet
+.cache
 .cache_main
 
 # Others
