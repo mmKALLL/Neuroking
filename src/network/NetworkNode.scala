@@ -1,8 +1,7 @@
-package neurotest
-package network
+package com.neuroking.core.network
 
 import scala.collection.mutable.ArrayBuffer
-import neurotest.system.System
+import com.neuroking.core.system.System
 
 /**
  * A trait that defines the nodes that are part of the neural network.

@@ -1,9 +1,8 @@
-package neurotest
-package system
+package com.neuroking.core.system
 
-import neurotest.gui.Launcher.dmsg
+import com.neuroking.core.network._
+import com.neuroking.core.ui.Launcher.dmsg
 import scala.collection.mutable.ArrayBuffer
-import neurotest.network._
 
 
 /**

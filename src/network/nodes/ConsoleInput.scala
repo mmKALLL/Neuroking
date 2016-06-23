@@ -1,7 +1,6 @@
-package neurotest 
-package network
-package nodes
+package com.neuroking.core.network.nodes
 
+import com.neuroking.core.network._
 
 /**
  * At the time of running a Network, all ConsoleInputs will

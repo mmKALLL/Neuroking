@@ -1,8 +1,7 @@
-package neurotest
-package network
+package com.neuroking.core.network
 
 import scala.collection.mutable.ArrayBuffer
-import neurotest.gui.Launcher.dmsg
+import com.neuroking.core.ui.Launcher.dmsg
 
 /**
  * This class represents a single network and controls the nodes

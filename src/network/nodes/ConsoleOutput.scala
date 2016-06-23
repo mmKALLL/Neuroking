@@ -1,7 +1,6 @@
-package neurotest
-package network
-package nodes
+package com.neuroking.core.network.nodes
 
+import com.neuroking.core.network._
 import scala.collection.mutable.Queue
 
 

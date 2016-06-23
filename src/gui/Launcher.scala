@@ -1,5 +1,4 @@
-package neurotest
-package gui
+package com.neuroking.core.ui
 
 
 /**

@@ -1,6 +1,6 @@
-package neurotest
-package network
-package nodes
+package com.neuroking.core.network.nodes
+
+import com.neuroking.core.network._
 
 /**
  * @author mmKALLL
@@ -9,6 +9,7 @@ package nodes
  * network within itself, and whose inputs and outputs are connected
  * to the underlying network's input and output nodes.
  */
+
 class SubNetworkProcessor(var name: String = "") extends HiddenNode {
   // TODO: Implement SubNetworkProcessor
   if (name.isEmpty()) name = "SubNetworkProcessor " + id

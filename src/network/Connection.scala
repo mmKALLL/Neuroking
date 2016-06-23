@@ -1,5 +1,4 @@
-package neurotest
-package network
+package com.neuroking.core.network
 
 
 /**
@@ -9,7 +8,7 @@ package network
 
 class Connection(private[network] val from: NetworkNode, private[network] val to: NetworkNode) {
   
-  val id: Int = neurotest.system.System.nextID
+  val id: Int = com.neuroking.core.system.System.nextID
   var name: String = "Connection " + id
   
   private[network] def send(data: Any) = to.receive(data, this)

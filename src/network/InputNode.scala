@@ -1,5 +1,4 @@
-package neurotest
-package network
+package com.neuroking.core.network
 
 // TODO: package com.neuroking.neuroking-core.network
 

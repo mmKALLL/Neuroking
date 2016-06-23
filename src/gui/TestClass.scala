@@ -1,11 +1,9 @@
-package neurotest
-package gui
+package com.neuroking.core.ui
 
-import neurotest._
-import neurotest.network._
-import neurotest.network.nodes._
-//import neurotest.network.nodetypes._
-import neurotest.system._
+import com.neuroking.core.system._
+import com.neuroking.core.network._
+import com.neuroking.core.network.nodes._
+import com.neuroking.core.ui._
 import java.io._
 
 /**

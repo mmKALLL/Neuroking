@@ -1,4 +1,4 @@
-package network.nodetypes
+package com.neuroking.core.network.nodetypes
 
 /**
  * A trait that describes nodes that choose which inputs/outputs

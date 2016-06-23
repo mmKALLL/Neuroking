@@ -1,5 +1,4 @@
-package neurotest
-package network
+package com.neuroking.core.network
 
 import scala.collection.mutable.ArrayBuffer
 
