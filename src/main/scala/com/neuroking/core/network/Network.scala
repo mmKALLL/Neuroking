@@ -2,6 +2,7 @@ package com.neuroking.core.network
 
 import scala.collection.mutable.ArrayBuffer
 import com.neuroking.core.ui.Launcher.dmsg
+import com.neuroking.core.network.nodes._
 
 /**
  * This class represents a single network and controls the nodes
@@ -45,7 +46,7 @@ class Network(var name: String = (Math.random * 99999).toInt.toString) {
   def flush = outputNodes.foreach { _.out }
   
   
-  override def toString() = "Network, name:" + name + "\n" +
+  override def toString() = "Network, name: " + name + "\n" +
                             "List of input nodes:\n" + 
                             (if (this.inputNodes.isEmpty) "[]"
                             else "[" + this.inputNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +

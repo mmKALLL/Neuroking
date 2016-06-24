@@ -142,28 +142,3 @@ class TestClass {
   
 }
 
-class TestClassOld {
-  
-  val test = new System()
-  
-  println(test.toString)
-  
-  
-  test.addNetwork()
-  
-  test.addNode(new ConsoleInput())
-  test.addNode(new ConsoleInput(), test.latestNetwork, "asdasdasd of " + test.name)
-  
-  println(test)
-  
-  test.addNetwork()
-  test.addNode(new RelayProcessor())
-  test.addNode(new RelayProcessor())
-  test.addNode(new ConsoleInput())
-  test.addNode(new RelayProcessor())
-  test.addNode(new ConsoleOutput())
-  
-  println("\n" + test)
-  
-  
-}
