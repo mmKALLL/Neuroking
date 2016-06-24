@@ -1,7 +1,5 @@
 package com.neuroking.core.network
 
-// TODO: package com.neuroking.neuroking-core.network
-
 import scala.collection.mutable.ArrayBuffer
 
 /**

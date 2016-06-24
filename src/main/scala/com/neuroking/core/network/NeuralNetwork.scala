@@ -21,7 +21,6 @@ class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
   private val outputNodes = ArrayBuffer[OutputNode]()
   private var ready = false
 
-  // FIXME: A better system for accessing nodes to add connections
   def getInputNodes = inputNodes
   def getHiddenNodes = hiddenNodes
   def getOutputNodes = outputNodes
