@@ -4,10 +4,10 @@ import com.neuroking.core.network._
 
 
 /**
- * A RelayProcessor is a type of HiddenNode that does
- * nothing but forward all received data onwards to
- * all its exits.
+ * @author mmKALLL
  * 
+ * A RelayProcessor is a type of HiddenNode that does nothing but
+ * forward all received data onwards to all its exits.
  */
 class RelayProcessor(var name: String = "") extends HiddenNode {
   

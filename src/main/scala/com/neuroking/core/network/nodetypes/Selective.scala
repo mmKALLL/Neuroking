@@ -1,6 +1,8 @@
 package com.neuroking.core.network.nodetypes
 
 /**
+ * @author mmKALLL
+ * 
  * A trait that describes nodes that choose which inputs/outputs
  * to pass specific types of data along.
  * 

@@ -11,7 +11,7 @@ import com.neuroking.core.network._
  */
 
 class SubNetworkProcessor(var name: String = "") extends HiddenNode {
-  // TODO: Implement SubNetworkProcessor
+  // TODO: Implement SubNetworkProcessor; consider how inputs are specified
   if (name.isEmpty()) name = "SubNetworkProcessor " + id
   
   private[network] def receive(data: Any, from: Connection): Unit = {

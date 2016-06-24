@@ -3,6 +3,8 @@ package com.neuroking.core.ui
 import com.neuroking.test._
 
 /**
+ * @author mmKALLL
+ * 
  * A simple wrapper for launching the software and displaying debug messages.
  * 
  * Command line arguments:

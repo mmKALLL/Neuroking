@@ -20,13 +20,13 @@ import scala.collection.mutable.ArrayBuffer
 
 class System(var name: String = (Math.random * 99999).toInt.toString) {
   // TODO: Probability density function nodes and fitness evaluation
-  private val networks = ArrayBuffer[Network]()
-  private def allNetworkNodes(network: Network = latestNetwork) = network.getInputNodes ++ network.getHiddenNodes ++ network.getOutputNodes
+  private val networks = ArrayBuffer[NeuralNetwork]()
+  private def allNetworkNodes(network: NeuralNetwork = latestNetwork) = network.getInputNodes ++ network.getHiddenNodes ++ network.getOutputNodes
   
   // Methods for adding and fetching networks easily.
   // Note that latestNetwork throws an exception if called with no networks!
-  def addNetwork() = networks += new Network()
-  def addNetwork(name: String) = networks += new Network(name)
+  def addNetwork() = networks += new NeuralNetwork()
+  def addNetwork(name: String) = networks += new NeuralNetwork(name)
   def latestNetwork = networks.last
   
   def removeNetwork(index: Int) = networks.remove(index)
@@ -38,13 +38,13 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
 //  def addNode(network: Network, node: NetworkNode) = network.addNode(node, "")
 //  def addNode(network: Network, node: NetworkNode, name: String) = network.addNode(node, name)
   // EXTEND: Document the method
-  def addNode(node: NetworkNode, network: Network = latestNetwork, name: String = "") = network.addNode(node, name)
-  def addNode(network: Network, node: NetworkNode*) = node.foreach(network.addNode(_))
+  def addNode(node: NetworkNode, network: NeuralNetwork = latestNetwork, name: String = "") = network.addNode(node, name)
+  def addNode(network: NeuralNetwork, node: NetworkNode*) = node.foreach(network.addNode(_))
   def addNode(node: NetworkNode*) = node.foreach(latestNetwork.addNode(_))
   
   // TODO: Node connect overloading is not elegant
   // TODO: Node connect is too hacky
-  def connect(network: Network, from: String, to: String) = {
+  def connect(network: NeuralNetwork, from: String, to: String) = {
     val nodes = allNetworkNodes(network)
     nodes.find(_.name == from) match {
       case x: Some[NetworkNode] => nodes.find(_.name == to) match {

@@ -4,8 +4,9 @@ import scala.collection.mutable.Queue
 
 
 /**
- * A node type that outputs the information received in some manner or another.
+ * @author mmKALLL
  * 
+ * A node type that outputs the information received in some manner or another.
  * They should not output prematurely, as it would break potential parallelization.
  */
 

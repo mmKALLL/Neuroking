@@ -5,6 +5,8 @@ import com.neuroking.core.ui.Launcher.dmsg
 import com.neuroking.core.network.nodes._
 
 /**
+ * @author mmKALLL
+ * 
  * This class represents a single network and controls the nodes
  * within, distributing and managing IDs and names, etc.
  *
@@ -12,7 +14,7 @@ import com.neuroking.core.network.nodes._
  * ready to output, at which point it flushes the output nodes' data.
  *
  */
-class Network(var name: String = (Math.random * 99999).toInt.toString) {
+class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
 
   private val inputNodes = ArrayBuffer[InputNode]()
   private val hiddenNodes = ArrayBuffer[HiddenNode]()

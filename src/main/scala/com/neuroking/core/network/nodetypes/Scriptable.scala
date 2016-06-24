@@ -1,6 +1,8 @@
 package com.neuroking.core.network.nodetypes
 
 /**
+ * @author mmKALLL
+ * 
  * A trait that describes nodes with scripting capability.
  * Note that as of writing, scripting is not yet implemented.
  * 

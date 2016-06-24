@@ -1,7 +1,8 @@
 package com.neuroking.core.network
 
-
 /**
+ * @author mmKALLL
+ * 
  * A connection is a one-way link between two nodes, passing data.
  * 
  */

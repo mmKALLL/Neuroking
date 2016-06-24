@@ -4,6 +4,8 @@ import scala.collection.mutable.ArrayBuffer
 import com.neuroking.core.system.System
 
 /**
+ * @author mmKALLL
+ * 
  * A trait that defines the nodes that are part of the neural network.
  * Nodes can create connections with each other.
  * 

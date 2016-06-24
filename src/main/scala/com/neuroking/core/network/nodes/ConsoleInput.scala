@@ -3,6 +3,8 @@ package com.neuroking.core.network.nodes
 import com.neuroking.core.network._
 
 /**
+ * @author mmKALLL
+ * 
  * At the time of running a Network, all ConsoleInputs will
  * on their turn take a single line of input from the console,
  * and then pass that to their outwards connections.

@@ -7,6 +7,8 @@ import com.neuroking.core.ui._
 import java.io._
 
 /**
+ * @author mmKALLL
+ * 
  * A class that will hold unit tests eventually, but for now is used
  * for playing around with the system.
  */

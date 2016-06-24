@@ -5,6 +5,8 @@ package com.neuroking.core.network
 import scala.collection.mutable.ArrayBuffer
 
 /**
+ * @author mmKALLL
+ * 
  * An InputNode receives input in some manner (e.g. console, file, visual data, ...),
  * can modify it and then sends that in some manner to its outputs to process.
  */
