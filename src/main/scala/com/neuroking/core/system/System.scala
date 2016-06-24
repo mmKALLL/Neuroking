@@ -42,9 +42,8 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   def addNode(network: NeuralNetwork, node: NetworkNode*) = node.foreach(network.addNode(_))
   def addNode(node: NetworkNode*) = node.foreach(latestNetwork.addNode(_))
   
-  // TODO: Node connect overloading is not elegant
   // TODO: Node connect is too hacky
-  def connect(network: NeuralNetwork, from: String, to: String) = {
+  def connect(network: NeuralNetwork, from: String, to: String): Unit = {
     val nodes = allNetworkNodes(network)
     nodes.find(_.name == from) match {
       case x: Some[NetworkNode] => nodes.find(_.name == to) match {
@@ -54,6 +53,8 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
       case _ => ???
     }
   }
+  
+  def connect(from: String, to: String): Unit = connect(latestNetwork, from, to)
   
   
   

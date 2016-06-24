@@ -37,7 +37,7 @@ class TestClass {
   assert(test.latestNetwork.getOutputNodes.length == 1, "network has the wrong number of output nodes; expected 1")
   
   test.latestNetwork.getInputNodes(0).connect(test.latestNetwork.getHiddenNodes(0))
-  test.latestNetwork.getHiddenNodes(0).connect(test.latestNetwork.getOutputNodes(0))
+  test.connect("hid1", "out1")
   
   assert(test.latestNetwork.getInputNodes(0).toString().contains("[hid1]"), "could not connect input to relay")
   assert(test.latestNetwork.getHiddenNodes(0).toString().contains("[out1]"), "could not connect relay to output")
