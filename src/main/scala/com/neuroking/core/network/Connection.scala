@@ -15,4 +15,4 @@ class Connection(private[network] val from: NetworkNode, private[network] val to
   
   override def toString = "Connection; name: " + this.name + ", from: " + from.name + ", to: " + to.name + "."
   
-} 
+}

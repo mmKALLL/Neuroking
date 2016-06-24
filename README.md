@@ -29,7 +29,7 @@ Planned for 0.3:
 - Systems should be configurable
 - More node types
 - Automated and easily expandable test suite
-- Simple text based UI; start on user testing
+- Simple text based UI with save/load; start on user testing
 
 Planned for 0.4:
 - More representations of output data (graphical RGB, graph, output to file)
