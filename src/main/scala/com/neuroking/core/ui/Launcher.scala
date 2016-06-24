@@ -28,6 +28,7 @@ object Launcher {
       print("Note: The UI is still under work. Execute with --test to run tests.")
   }
   
+  // TODO: Debug levels based on message prefix
   def dmsg(in: Any*) {
     if (debug) in.map(println(_))
   }

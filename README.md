@@ -41,7 +41,7 @@ Planned for 0.5:
 
 Planned for 0.6:
 - Nodes with parametrized biases and thresholds between different value ranges (with e.g. sigmoid functions)
-- Systems of Systems; multiple interconnected networks
+- Systems having interconnected networks, with outputs connected to inputs
 
 Planned for 0.7:
 - Config files

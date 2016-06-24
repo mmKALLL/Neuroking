@@ -18,6 +18,7 @@ trait NetworkNode {
   
   protected val outputs = ArrayBuffer[Connection]()
   
+  // Name is intended for user interaction, id for System-level unique identification
   val id: Int = System.nextID()
   var name: String
   

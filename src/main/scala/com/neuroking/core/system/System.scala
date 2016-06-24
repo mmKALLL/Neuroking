@@ -57,9 +57,14 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   def connect(from: String, to: String): Unit = connect(latestNetwork, from, to)
   
   
+  def runAllNetworks() = {
+    for (x <- networks) {
+      x.run
+      x.flush
+    }
+  }
   
   // TODO: Feedback loop, genetics, etc
-  // TODO: ID system for nodes
   
   // EXTEND: Indentation for the .toString newlines.
   override def toString() = if (this.networks.isEmpty) "System " + name + " has no networks.\n\n"
@@ -68,8 +73,16 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
   
 }
 
+// The System object has some utility functions related to identifying nodes in the System.
 object System {
+  
+  // Nodemap is a mapping from id's to their respective nodes.
+  val nodemap: Map[Int, NetworkNode] = Map[Int, NetworkNode]()
+  
   // TODO: Better id implementation.
-  def nextID() = (Math.random * 99999).toInt
+  def nextID() = {
+    // TODO: Check that the id is not in use, then assign it and save the node to the nodemap
+    (Math.random * 899999 + 100000).toInt
+  }
 }
 
