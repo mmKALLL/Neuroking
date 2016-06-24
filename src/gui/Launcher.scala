@@ -1,5 +1,6 @@
 package com.neuroking.core.ui
 
+// FIXME: Change the source file folder paths to reflect new packages
 
 /**
  * A simple wrapper for launching the software and displaying debug messages.
