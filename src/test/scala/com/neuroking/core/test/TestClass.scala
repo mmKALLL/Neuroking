@@ -1,4 +1,4 @@
-package com.neuroking.core.ui
+package com.neuroking.test
 
 import com.neuroking.core.system._
 import com.neuroking.core.network._
@@ -17,6 +17,7 @@ class TestClass {
   
   assert(true, "this assertion should be true")
   
+  
   // Test number 1:   CI--RP--CO
   test.addNetwork("1")
   assert(test.latestNetwork.name == "1", "System.latestNetwork doesn't work as intended")
@@ -29,9 +30,9 @@ class TestClass {
   test.latestNetwork.addNode(new RelayProcessor, "hid1")
   test.addNode(new ConsoleOutput("out1"))
   
-  assert(test.latestNetwork.getInputNodes.length == 1, "network has too many input nodes")
-  assert(test.latestNetwork.getHiddenNodes.length == 1, "network has too many hidden nodes")
-  assert(test.latestNetwork.getOutputNodes.length == 1, "network has too many output nodes")
+  assert(test.latestNetwork.getInputNodes.length == 1, "network has the wrong number of input nodes; expected 1")
+  assert(test.latestNetwork.getHiddenNodes.length == 1, "network has the wrong number of hidden nodes; expected 1")
+  assert(test.latestNetwork.getOutputNodes.length == 1, "network has the wrong number of output nodes; expected 1")
   
   test.latestNetwork.getInputNodes(0).connect(test.latestNetwork.getHiddenNodes(0))
   test.latestNetwork.getHiddenNodes(0).connect(test.latestNetwork.getOutputNodes(0))

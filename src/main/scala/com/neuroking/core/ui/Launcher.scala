@@ -1,5 +1,7 @@
 package com.neuroking.core.ui
 
+import com.neuroking.test._
+
 // FIXME: Change the source file folder paths to reflect new packages
 
 /**
@@ -7,16 +9,23 @@ package com.neuroking.core.ui
  * 
  * Command line arguments:
  * -d, --debug - enable debug messages to console.
+ * -T, --test - run tests instead of UI
  * 
  */
 object Launcher {
   
   var debug = false
+  var runTests = false
   
   def main(args: Array[String]) {
+    // EXTEND: Better and safer system for parsing arguments; fix nonescaped user args
     debug = args.filter(_.contains("-d")).length >= 1
 //    dmsg("debug mode enabled" + "asd " + 123, 1234, "aaaa", new Object)
-    new TestClass()
+    runTests = args.filter(_.toLowerCase().contains("-t")).length >= 1
+    if (runTests)
+      new TestClass()
+    else
+      print("Note: The UI is still under work. Execute with --test to run tests.")
   }
   
   def dmsg(in: Any*) {
