@@ -1,7 +1,7 @@
 package com.neuroking.core.system
 
-import com.neuroking.core.network._
 import com.neuroking.core.ui.Launcher.dmsg
+import com.neuroking.core.network._
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.Map
 
@@ -77,13 +77,13 @@ class System(var name: String = System.nextID().toInt.toString) {
 // The System object has some utility functions related to identifying nodes in the System.
 object System {
   
-  var currentID = 0
+  private var currentID = 0
   
   // idMap is a mapping from id's to their respective objects.
-  val idMap: Map[Int, Any] = Map[Int, Any]()
+  // EXTEND: Accessors for idMap
+  private val idMap: Map[Int, Any] = Map[Int, Any]()
   
-  // FIXME: The referencing classes do not use the new ID system.
-  // nextID gives a node an ID that is unique within the System
+  // nextID gives a node an ID that is unique within the System, or adds the item to the map if given
   // EXTEND: Both ordered and randomized IDs. Check for collisions (parallelization, etc).
   def nextID(): Int = {
     currentID += 1
