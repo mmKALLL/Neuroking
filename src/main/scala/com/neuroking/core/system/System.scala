@@ -5,7 +5,6 @@ import com.neuroking.core.ui.Launcher.dmsg
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.Map
 
-
 /**
  * @author mmKALLL
  * 
@@ -19,7 +18,7 @@ import scala.collection.mutable.Map
  * Parameters:
  */
 
-class System(var name: String = (Math.random * 99999).toInt.toString) {
+class System(var name: String = System.nextID().toInt.toString) {
   // TODO: Probability density function nodes and fitness evaluation
   private val networks = ArrayBuffer[NeuralNetwork]()
   private def allNetworkNodes(network: NeuralNetwork = latestNetwork) = network.getInputNodes ++ network.getHiddenNodes ++ network.getOutputNodes
@@ -79,16 +78,28 @@ object System {
   
   var currentID = 0
   
-  // Nodemap is a mapping from id's to their respective nodes.
-  val nodemap: Map[Int, NetworkNode] = Map[Int, NetworkNode]()
+  // idMap is a mapping from id's to their respective objects.
+  val idMap: Map[Int, Any] = Map[Int, Any]()
   
-  // nextID gives a node an unique ID and adds it to the map
-  // TODO: Think about where each step should be accessed from. What are the responsibilities?
+  // FIXME: The referencing classes do not use the new ID system.
+  // nextID gives a node an ID that is unique within the System
   // EXTEND: Both ordered and randomized IDs. Check for collisions (parallelization, etc).
-  def nextID(node: NetworkNode): Int = {
+  def nextID(): Int = {
     currentID += 1
-    nodemap(currentID) = node
     return currentID
   }
+  
+  def nextID(newitem: NetworkNode): Int = {
+    val newID = nextID()
+    idMap += newID -> newitem
+    return newID
+  }
+  
+  def nextID(newitem: Connection): Int = {
+    val newID = nextID()
+    idMap += newID -> newitem
+    return newID
+  }
+
 }
 
