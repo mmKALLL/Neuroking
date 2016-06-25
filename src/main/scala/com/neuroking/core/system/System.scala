@@ -3,6 +3,7 @@ package com.neuroking.core.system
 import com.neuroking.core.network._
 import com.neuroking.core.ui.Launcher.dmsg
 import scala.collection.mutable.ArrayBuffer
+import scala.collection.mutable.Map
 
 
 /**
@@ -76,17 +77,17 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
 // The System object has some utility functions related to identifying nodes in the System.
 object System {
   
-  var currentID = 1
+  var currentID = 0
   
   // Nodemap is a mapping from id's to their respective nodes.
   val nodemap: Map[Int, NetworkNode] = Map[Int, NetworkNode]()
   
-  // nextID returns an unused ID, which is guaranteed to be unique within the System
+  // nextID gives a node an unique ID and adds it to the map
+  // TODO: Think about where each step should be accessed from. What are the responsibilities?
   // EXTEND: Both ordered and randomized IDs. Check for collisions (parallelization, etc).
-  def nextID(): Int = {
-    while (nodemap(currentID) != null) {
-      currentID += 1
-    }
+  def nextID(node: NetworkNode): Int = {
+    currentID += 1
+    nodemap(currentID) = node
     return currentID
   }
 }
