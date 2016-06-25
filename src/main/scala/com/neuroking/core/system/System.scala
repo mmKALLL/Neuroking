@@ -90,17 +90,11 @@ object System {
     return currentID
   }
   
-  def nextID(newitem: NetworkNode): Int = {
+  def nextID(newitem: Any): Int = {
     val newID = nextID()
     idMap += newID -> newitem
     return newID
   }
   
-  def nextID(newitem: Connection): Int = {
-    val newID = nextID()
-    idMap += newID -> newitem
-    return newID
-  }
-
 }
 
