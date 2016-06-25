@@ -76,13 +76,18 @@ class System(var name: String = (Math.random * 99999).toInt.toString) {
 // The System object has some utility functions related to identifying nodes in the System.
 object System {
   
+  var currentID = 1
+  
   // Nodemap is a mapping from id's to their respective nodes.
   val nodemap: Map[Int, NetworkNode] = Map[Int, NetworkNode]()
   
-  // TODO: Better id implementation.
-  def nextID() = {
-    // TODO: Check that the id is not in use, then assign it and save the node to the nodemap
-    (Math.random * 899999 + 100000).toInt
+  // nextID returns an unused ID, which is guaranteed to be unique within the System
+  // EXTEND: Both ordered and randomized IDs. Check for collisions (parallelization, etc).
+  def nextID(): Int = {
+    while (nodemap(currentID) != null) {
+      currentID += 1
+    }
+    return currentID
   }
 }
 
