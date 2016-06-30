@@ -67,5 +67,5 @@ Planned for 0.8:
 ## Known issues:
 
 - Output nodes are processed in the order they were added into the network
-- Builds sometimes fail to recognize the package structure
+- Eclipse sometimes fails to recognize the package structure (unless all files are opened...)
 - ~~Too many todos :)~~
