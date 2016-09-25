@@ -68,4 +68,4 @@ Planned for 0.8:
 
 - Output nodes are processed in the order they were added into the network
 - Eclipse sometimes fails to recognize the package structure (unless all files are opened...)
-- ~~Too many todos~~ fixed bugs
+- ~~Too many todos~~
