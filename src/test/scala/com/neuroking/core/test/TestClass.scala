@@ -9,7 +9,7 @@ import java.io._
 /**
  * @author mmKALLL
  * 
- * A class that will hold proper unit tests eventually, but for now is used
+ * A class that will hold unit tests eventually, but for now is used
  * for playing around with the system.
  */
 

@@ -6,7 +6,7 @@ import com.neuroking.core.network.nodes._
 
 /**
  * @author mmKALLL
- * 
+ *
  * This class represents a single network and controls the nodes
  * within, distributing and managing IDs and names, etc.
  *
@@ -24,7 +24,7 @@ class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
   def getInputNodes = inputNodes
   def getHiddenNodes = hiddenNodes
   def getOutputNodes = outputNodes
-  
+
   // Adds a node into the network, depending on type.
   def addNode(node: NetworkNode, name: String = "") = {
     if (!name.isEmpty()) {
@@ -37,17 +37,17 @@ class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
       case _ => throw new Exception("The type of node " + node.name + " is not supported!")
     }
   }
-  
+
   // EXTEND: For-comprehensions are slow; use while-loops instead
   // Starts the network: inputs gather input and things are passed along
   def run = inputNodes.foreach { _.readInput() }
 
   // Once done, outputs receive a notification that they may output their data
   def flush = outputNodes.foreach { _.out }
-  
-  
+
+
   override def toString() = "Network, name: " + name + "\n" +
-                            "List of input nodes:\n" + 
+                            "List of input nodes:\n" +
                             (if (this.inputNodes.isEmpty) "[]"
                             else "[" + this.inputNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +
                             "\nList of hidden nodes:\n" +
@@ -58,4 +58,3 @@ class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
                             else "[" + this.outputNodes.map(_.toString + ",\n ").reduceLeft(_ + _).dropRight(3) + " ]") +
                             ""
 }
-

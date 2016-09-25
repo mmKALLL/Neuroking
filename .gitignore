@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+/bin
+.DS_store
+.cache-main
+=======
 # Mac stuff
 .DS_Store
 .DS_Store?
@@ -27,3 +32,4 @@ project/plugins/project/
 # Others
 
 /bin/
+>>>>>>> 2a3da6903cf17f86e70b982b162280503ca4a157
