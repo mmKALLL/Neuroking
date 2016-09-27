@@ -39,6 +39,7 @@ class NeuralNetwork(var name: String = (Math.random * 99999).toInt.toString) {
   }
 
   // EXTEND: For-comprehensions are slow; use while-loops instead
+  // FIXME: Use the "ready" private member to check whether flushing is ok. Set it to true when running network.
   // Starts the network: inputs gather input and things are passed along
   def run = inputNodes.foreach { _.readInput() }
 
