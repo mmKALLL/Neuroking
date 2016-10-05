@@ -1,9 +1,9 @@
 #Neuroking
 Now at version 0.1.1! <br />
-Readme last updated on 2016-06-30. <br />
+Readme last updated on 2016-10-04. <br />
 Currently working on: Coming up with progressive integration tests to define what the software should do on a higher level.
 
-Neuroking is a tool for designing neural networks, which can do various computations and optimize themselves to do those computations quite accurately. The basic idea is to generalize a problem based on some training data, while using advanced techniques to ensure that the generalization accuracy is as good as possible. The main principle is that currently utilizing these techniques requires a lot of domain knowledge or a background in programming, but with an incremental UI that hides unnecessary information this can be overcome.
+Neuroking is a tool for designing neural networks, which can do various computations and optimize themselves to do those computations quite accurately. The basic idea is to generalize a problem based on some training data, while using advanced techniques to ensure that the generalization accuracy is as good as possible. The main problem currently is that using these technologies requires a lot of domain knowledge or a background in programming, but with an incremental UI that hides unnecessary information this can be easy and even fun.
 
 Therefore, Neuroking aims to accomplish two things: <br />
 1) Make it easy for anyone to utilize the power of machine learning <br />
@@ -68,4 +68,4 @@ Planned for 0.8:
 
 - Output nodes are processed in the order they were added into the network
 - Eclipse sometimes fails to recognize the package structure (unless all files are opened...)
-- ~~Too many todos :)~~
+- ~~Too many todos :)~~ fixed
