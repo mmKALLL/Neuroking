@@ -10,7 +10,7 @@ Therefore, Neuroking aims to accomplish two things: <br />
 2) Allow people to share their creations with others <br />
 
 In my opinion, it should be possible to accomplish these goals while making the source code available. <br />
-If - or rather, once - it becomes popular, I might aim to allow people to monetize their modules in an app-store style. <br />
+If it becomes popular, I might aim to allow people to monetize their modules in an app-store style. <br />
 
 The basic structure is more or less ready, so from here on I'll be venturing into unexplored territory and make something completely new. <br />
 
