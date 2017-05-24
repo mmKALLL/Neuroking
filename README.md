@@ -1,4 +1,4 @@
-#Neuroking
+# Neuroking
 Now at version 0.1.1! <br />
 Readme last updated on 2016-10-04. <br />
 Currently working on: Coming up with progressive integration tests to define what the software should do on a higher level.
@@ -18,7 +18,7 @@ Since this is a project which I'm only working on during my free time, it will m
 
 There's not a whole lot going on yet, but stay tuned! <br />
 
-##Roadmap
+## Roadmap
 Planned for 0.2:
 - Create Systems - they will manage the network and optimize the parameters to smartly maximize a fitness function.
 - Nodes with optimizable parameters
@@ -53,7 +53,7 @@ Planned for 0.8:
 - Start work on connecting the core with an arbitrary GUI
 
 
-##Release notes:
+## Release notes:
 
 0.1:
 - Initial release
